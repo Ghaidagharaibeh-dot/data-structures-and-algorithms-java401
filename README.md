@@ -5,4 +5,6 @@
 | ------------- | ------------- | ------------- |
 | 1	  |  reverse-array | [Link](codechallenges/array-reverse/README.md)|
 | 2  |  array-insert-shift | [Link](codechallenges/array-reverse/README.md)|
+| 3  |  array-binary-search | [Link](codechallenges/array-binary-search/README.md)|
+
 
