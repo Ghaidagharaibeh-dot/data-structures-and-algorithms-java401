@@ -1,4 +1,4 @@
-# Linked List
+# class 05 : Linked List 
 Nodes that are connected to each other which mean Node references the next Node.
 
 # Challenge
