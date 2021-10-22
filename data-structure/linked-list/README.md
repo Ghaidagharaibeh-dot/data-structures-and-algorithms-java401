@@ -46,3 +46,12 @@ node (referance node is the node we want to add node before or after  )
 while loop to iterate over the linked list nodes the complexity: time :O(N) Space :O(1)
 
 
+# Code Challenge 07 
+
+# Challenge Summary
+write a method give the value of order node from tail in liked list 
+## Whiteboard Process
+
+![](codechallenge07.png)
+
+
