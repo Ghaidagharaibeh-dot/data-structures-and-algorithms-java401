@@ -1,8 +1,10 @@
+# Challenge 05
 # Linked List
 Nodes that are connected to each other which mean Node references the next Node.
 
-# Challenge
- 
+ # Challenge Summary
+
+
 - A Node class that has properties for the value stored in the Node,
 and a pointer to the next Node.
 - Insert method to add a new node at the beginning of the LinkedList.
@@ -18,3 +20,29 @@ define new node if head is null the new node equal head otherwise the next of ne
 loop throw the linked list then ensure if the node is exist through build in methods Objects.equals
 
 -toString: Returns a string containing all the values of the nodes of the linked list.
+
+
+# Code challenge 06 
+
+# Challenge Summary
+In this challang I created three methods one
+for adding new node at the end of list , before referance node and after referance 
+node (referance node is the node we want to add node before or after  ) 
+
+## Whiteboard Process
+
+
+![](challenge6part1.png)
+
+
+![](challenge6part2.png)
+
+
+![](challenge6part3.png)
+
+
+
+## Approach & Efficiency
+while loop to iterate over the linked list nodes the complexity: time :O(N) Space :O(1)
+
+
