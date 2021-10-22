@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+    // Test code challenge 05
+
     @Test void TestEmpty() {
         LinkedList emptyL = new LinkedList();
         String expected="";
@@ -74,6 +76,77 @@ class AppTest {
         testList.insert("9");
         testList.insert("3");
         assertEquals("{3} -> {9} -> {1} -> {25} -> {7} -> NULL",testList.toString());
+    }
+
+    //Test code challenge 06
+
+    @Test void testAppend (){
+        LinkedList testing=new LinkedList();
+        testing.append("A");
+        testing.append("B");
+        testing.append("C");
+        testing.append("D");
+        testing.append("E");
+
+        assertEquals("{A} -> {B} -> {C} -> {D} -> {E} -> NULL",testing.toString());
+    }
+
+    @Test void addMultipleEndNodesTest(){
+        LinkedList testing=new LinkedList();
+        testing.append("100");
+        testing.append("200");
+        testing.append("300");
+        testing.append("400");
+        testing.append("500");
+assertEquals("{100} -> {200} -> {300} -> {400} -> {500} -> NULL",testing.toString());
+
+
+    }
+    @Test void insertBeforeMiddle(){
+        LinkedList testing=new LinkedList();
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        testing.insert("1");
+        testing.insertBefore("0","3");
+        assertEquals("{1} -> {2} -> {0} -> {3} -> {4} -> {5} -> NULL",testing.toString());
+
+    }
+    @Test void insertAfterHead(){
+        LinkedList testing=new LinkedList();
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        testing.insert("1");
+        testing.insertBefore("0","1");
+        assertEquals("{0} -> {1} -> {2} -> {3} -> {4} -> {5} -> NULL",testing.toString());
+
+    }
+
+    @Test void insertAfterMiddle(){
+        LinkedList testing=new LinkedList();
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        testing.insert("1");
+        testing.insertAfter("3","-1");
+        assertEquals("{1} -> {2} -> {3} -> {-1} -> {4} -> {5} -> NULL",testing.toString());
+
+    }
+
+    @Test void insertAfterTail(){
+        LinkedList testing=new LinkedList();
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        testing.insert("1");
+        testing.insertAfter("5","TailNode");
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {TailNode} -> NULL",testing.toString());
+
     }
 
 }

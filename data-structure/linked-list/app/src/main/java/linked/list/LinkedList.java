@@ -50,54 +50,66 @@ public class LinkedList {
 
     }
 
-//    public void append(String value) {
-//        Node newNode = new Node(value);
-//
-//        if (size !=0){
-//            Node currentNode=head;
-//            while (currentNode.next != null){
-//                currentNode=currentNode.next;
-//            }
-//            currentNode.next =newNode;
-//            size++;
-//
-//        }
-//        else {
-//            head = newNode;
-//            size++;
-//        }
-//
-//    }
-//
-//    public void insertBef(String reference, String value) {
-//
-//        Node temp = new Node(data);
-//        Node current = head;
-//
-//        if (head != null){
-//            for (int i=1;i<size;i++){
-//                if (current==head){
-//                    Node newNode =head;
-//                    newNode.next=temp;
-//                    current=current.next;
-//                }
-//                else if(current.value == reference){
-//                    Node newNode=current;
-//                    newNode.value=current.value;
-//                    newNode.next=temp;
-//                    current=current.next;
-//
-//                }
-//            }
-//            size++;
-//        }
-//           else {
-//    temp.next=head;
-//    head=temp;
-//        }
-//
-//    }
-//
+    public void append(String value) {
+        Node newNode = new Node(value);
+
+        if (head != null){
+            Node currentNode=head;
+            while (currentNode.next != null){
+                currentNode=currentNode.next;
+            }
+            currentNode.next =newNode;
+            size++;
+
+        }
+        else {
+            head = newNode;
+            size++;
+        }
+
+    }
+    public void insertBefore(String newValue, String currentValue) {
+
+        Node newNode = new Node(newValue);
+        Node current = head;
+        Node previous =null;
+        if(head.getValue() == currentValue){
+            newNode.setNext(head);
+            head=newNode;
+            return;
+        }
+        while (current != null){
+            if(current.getValue() == currentValue){
+                newNode.setNext(current);
+                previous.setNext(newNode);
+                break;
+            }
+            else {
+                previous=current;
+                current=current.getNext();
+            }
+        }
+
+
+    }
+
+
+    public void insertAfter(String reference, String value) {
+
+        Node temp = new Node(value);
+        Node current = head;
+        while ( current != null){
+            if (current.getValue().equals(reference)) {
+
+                temp.setNext(current.getNext());
+                current.setNext(temp);
+                break;
+            } else {
+                current = current.getNext();
+            }
+        }
+    }
+
 //
 //    public void insertAfter(String  reference , String value){
 //        Node current =head;
