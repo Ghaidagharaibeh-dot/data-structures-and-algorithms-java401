@@ -149,4 +149,59 @@ assertEquals("{100} -> {200} -> {300} -> {400} -> {500} -> NULL",testing.toStrin
 
     }
 
+    //Test code challenge 06
+
+
+    @Test void   kIsGreaterThanLength(){
+        LinkedList testing=new LinkedList();
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        assertEquals("Exception", testing.kthFromEnd(10));
+
+    }
+    @Test void KEqualListLength(){
+        LinkedList testing=new LinkedList();
+
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        assertEquals("Exception", testing.kthFromEnd(4));
+
+    }
+    @Test void KthValueNegative(){
+        LinkedList testing=new LinkedList();
+
+        testing.insert("5");
+        testing.insert("4");
+        testing.insert("3");
+        testing.insert("2");
+        assertEquals("Exception", testing.kthFromEnd(-1));
+
+    }
+    @Test
+    public void size1() {
+        LinkedList testing = new LinkedList();
+        testing.insert("1");
+        assertEquals("Exception", testing.kthFromEnd(1));
+    }
+
+   @Test public void happyPath() {
+        LinkedList testing = new LinkedList();
+
+        testing.insert("H");
+        testing.insert("a");
+        testing.insert("p");
+        testing.insert("p");
+        testing.insert("y");
+        testing.insert(" ");
+        testing.insert("P");
+        testing.insert("a");
+        testing.insert("t");
+        testing.insert("h");
+
+        assertEquals(" ", testing.kthFromEnd(5));
+    }
 }

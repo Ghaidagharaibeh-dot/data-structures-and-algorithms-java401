@@ -110,40 +110,25 @@ public class LinkedList {
         }
     }
 
-//
-//    public void insertAfter(String  reference , String value){
-//        Node current =head;
-//        while (current!= null){
-//            if(current.value == reference){
-//                Node newNode= new Node(value);
-//                newNode.next=current.next;
-//                current.next=newNode;
-//                break;
-//            }
-//            current=current.next;
-//        }
-//        if(current==null){
-//            insert(value);
-//        }
-//    }
-//
-//    public String kthFromEnd(int kth) {
-//        Node current=head;
-//        if(head==null){
-//            System.out.println("empty list");
-//        }
-//        if ( kth > getSize()-1 || kth<0 ){
-//            return  "Exception";
-//        }
-//        int initalValue=0;
-//        while (initalValue <(getSize()-kth-1)){
-//            current=current.getNext();
-//            initalValue++;
-//        }
-//return current.getValue();
-//        }
-//
-//    }
+
+
+    public String kthFromEnd(int kth) {
+        Node current=head;
+        if(head==null){
+            System.out.println("empty list");
+        }
+        if ( kth > getSize()-1 || kth<0 ){
+            return  "Exception";
+        }
+        int initalValue=0;
+        while (initalValue <(getSize()-kth-1)){
+            current=current.getNext();
+            initalValue++;
+        }
+return current.getValue();
+        }
+
+
 
 @Override
     public String toString() {
