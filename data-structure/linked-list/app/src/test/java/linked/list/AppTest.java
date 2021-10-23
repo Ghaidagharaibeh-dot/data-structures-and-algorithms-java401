@@ -204,4 +204,44 @@ assertEquals("{100} -> {200} -> {300} -> {400} -> {500} -> NULL",testing.toStrin
 
         assertEquals(" ", testing.kthFromEnd(5));
     }
+
+    // test code challenge 08
+
+     @Test void zipTest(){
+        LinkedList linkedList1 = new LinkedList();
+         linkedList1.insert("6");
+         linkedList1.insert("4");
+         linkedList1.insert("2");
+
+
+        LinkedList linkedList2 = new LinkedList();
+         linkedList2.insert("5");
+         linkedList2.insert("3");
+         linkedList2.insert("1");
+
+
+
+
+        LinkedList testing =new LinkedList();
+        String expected="{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> NULL";
+        assertEquals(expected,testing.zipLists(linkedList1,linkedList2));
+    }
+
+    @Test
+    public void zipBothListEmpty(){
+
+        LinkedList linkedList1 = new LinkedList();
+        LinkedList linkedList2 = new LinkedList();
+
+
+        assertNull(linkedList1.zipLists(linkedList1, linkedList2), "empty lists");
+
+    }
+
+
+
+
+
+
+
 }

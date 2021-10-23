@@ -129,6 +129,47 @@ return current.getValue();
         }
 
 
+      // code challenge 08
+    public LinkedList  zipLists(LinkedList firstLinkedList, LinkedList secondLinkedList){
+      if (firstLinkedList == null){
+          return secondLinkedList;
+      }
+      else  if(secondLinkedList == null ){
+          return firstLinkedList;
+      }
+      else if (firstLinkedList==null && secondLinkedList==null){
+          System.out.println("empty lists");
+
+      }else {
+          Node firstcurrent=firstLinkedList.head;
+          Node secandCurrrnt=secondLinkedList.head;
+          Node firstTemp;
+          Node secondTemp;
+          while (secandCurrrnt != null && firstcurrent.getNext() != null){
+              firstTemp=firstcurrent.getNext();
+              secondTemp=secandCurrrnt.getNext();
+              secandCurrrnt.setNext(firstcurrent);
+              firstcurrent.setNext(secondTemp);
+              secandCurrrnt=secondTemp;
+              firstcurrent=firstTemp;
+              size++;
+              if (secandCurrrnt.getNext()==null){
+                  secandCurrrnt.setNext(firstcurrent);
+                  break;
+              }
+
+          }
+
+      }
+return secondLinkedList;
+
+
+    }
+
+
+
+
+
 
 @Override
     public String toString() {

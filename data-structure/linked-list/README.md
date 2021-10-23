@@ -55,3 +55,18 @@ write a method give the value of order node from tail in liked list
 ![](codechallenge07.png)
 
 
+# Code challenge 08
+
+# Challenge Summary
+
+ writing code connect tow linkedlist to one linkedlist that have  nodes alternate between the two lists.
+
+## Whiteboard Process
+
+![](codeCh08.png)
+
+## Approach & Efficiency
+I used a while loop and declared some variables and used get and set methods.
+
+
+
