@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4d64994-ca4b-48d1-986d-42b9bcf67218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/app/src/main/java/stackAndQueue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/app/src/main/java/stackAndQueue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data-structure/stackAndQueue/app/src/main/java/stackAndQueue/Stack.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1zxGhnU3i3qYLtolXeNsjkepHcb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4d64994-ca4b-48d1-986d-42b9bcf67218" name="Changes" comment="" />
+      <created>1635082447525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635082447525</updated>
+    </task>
+    <servers />
+  </component>
+</project>
