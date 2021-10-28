@@ -2,6 +2,10 @@ package stackAndQueue;
 
 public class Brackets {
 
+    public String duckDuckGoose(String list[] ,int k){
+
+
+
     public boolean validateBrackets(String brackets){
         Stack leftBracket=new Stack();
 
