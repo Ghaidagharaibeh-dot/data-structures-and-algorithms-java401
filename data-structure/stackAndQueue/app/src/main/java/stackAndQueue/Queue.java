@@ -8,7 +8,7 @@ public class Queue {
     private Node last;
 
     public void enqueue(String data){
-        if(ifEmpty()){
+        if(isEmpty()){
             Node newNode= new Node(data);
             first=newNode;
             last=newNode;
@@ -22,7 +22,7 @@ public class Queue {
     }
 
     public String dequeue(){
-        if (ifEmpty()) {
+        if (isEmpty()) {
             return "The Queue Is Empty";
         } else {
             String value=first.getData();
@@ -35,7 +35,23 @@ public class Queue {
         return first.getData();
     }
 
-    public boolean ifEmpty() {
+    public boolean isEmpty() {
         return first == null;
+    }
+
+    @Override
+    public String toString() {
+        if (first == null) {
+            return "The List is empty";
+        } else {
+            String outPut = "";
+            Node node = first;
+            while (node != null) {
+                outPut += "{" + node.getData() + "}" + " -> ";
+                node = node.getNext();
+            }
+            outPut += "{Null}";
+            return outPut;
+        }
     }
 }

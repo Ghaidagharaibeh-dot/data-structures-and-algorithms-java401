@@ -7,12 +7,141 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    public void validateBracketsTest() {
+    // test codeChallenge 10
+  @Test
+  public void testPush(){
 
-        Brackets test = new Brackets();
+      Stack testing=new Stack();
+      testing.push("Ghaida");
+      testing.push("Gharaibeh");
+      assertEquals("Gharaibeh",testing.peek());
+      assertFalse(testing.isEmpty());
 
-        assertTrue(test.validateBrackets("{}")); // true
-        assertTrue(test.validateBrackets("{}(){}")); // true
-//
+  }
+      @Test void multiPush() {
+          Stack testing=new Stack();
+
+          testing.push("magic");
+          testing.push("not");
+          testing.push("Logic");
+
+          String expected = "{Logic} -> {not} -> {magic} -> {Null}";
+          assertEquals(expected, testing.toString());
+
+      }
+@Test
+  public void testPop (){
+      Stack testing=new Stack();
+      testing.push("1");
+      testing.push("2");
+      testing.push("3");
+
+      assertEquals("3", testing.pop());
+      assertEquals("2", testing.peek());
+  }
+  @Test
+    public void multiplePop (){
+        Stack testing=new Stack();
+        testing.push("1");
+        testing.push("2");
+        testing.push("3");
+        testing.push("4");
+        testing.push("5");
+        testing.push("6");
+        testing.push("7");
+        testing.push("8");
+        testing.pop();
+        testing.pop();
+        testing.pop();
+        testing.pop();
+        testing.pop();
+
+        assertEquals("3", testing.peek());
     }
+
+      @Test void peekTest() {
+    Stack testing = new Stack();
+    testing.push("1");
+    testing.push("2");
+    testing.push("3");
+    String expected = "3";
+    assertEquals(expected, testing.peek());
+  }
+
+    @Test void emptyTest() {
+        Stack testing = new Stack();
+        boolean expected = true;
+        assertEquals(expected, testing.isEmpty());
+    }
+    @Test void popEmptyTest() {
+        Stack testing = new Stack();
+        String expected = "The Stack Is Empty";
+        assertEquals(expected, testing.pop());
+        assertEquals(expected, testing.peek());
+    }
+
+    @Test void testEnqueue() {
+        Queue testing = new Queue();
+        testing.enqueue("1");
+        testing.enqueue("2");
+        testing.enqueue("3");
+        String expected = "{1} -> {2} -> {3} -> {Null}";
+        assertEquals(expected, testing.toString());
+    }
+    @Test void multiEnqueue() {
+        Queue testing = new Queue();
+        testing.enqueue("1");
+        testing.enqueue("2");
+        testing.enqueue("3");
+        testing.enqueue("4");
+        testing.enqueue("5");
+        testing.enqueue("6");
+        testing.enqueue("7");
+        testing.enqueue("8");
+        testing.enqueue("9");
+        testing.enqueue("10");
+
+
+        String expected = "{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> {7} -> {8} -> {9} -> {10} -> {Null}";
+        assertEquals(expected, testing.toString());
+    }
+    @Test void testDequeue() {
+        Queue testing = new Queue();
+        testing.enqueue("1");
+        testing.enqueue("2");
+        testing.enqueue("3");
+        String expected = "1";
+        assertEquals(expected, testing.dequeue());
+    }
+    @Test void peekQueue() {
+        Queue testing = new Queue();
+        testing.enqueue("1");
+        testing.enqueue("2");
+        testing.enqueue("3");
+        testing.enqueue("4");
+        testing.enqueue("5");
+        assertEquals("1", testing.peek());
+    }
+
+    @Test void emptyQueue() {
+        Queue testing = new Queue();
+        testing.enqueue("ghaida");
+        testing.enqueue("gh");
+        testing.dequeue();
+        testing.dequeue();
+        assertEquals("The List is empty", testing.toString());
+    }
+
+    @Test void instemptyQueue() {
+        Queue testing = new Queue();
+        assertEquals(true, testing.isEmpty());
+    }
+
+    @Test void peekEmptyQueue() {
+        Queue testing = new Queue();
+        assertEquals(" ", testing.peek());
+    }
+
+
+
 }
