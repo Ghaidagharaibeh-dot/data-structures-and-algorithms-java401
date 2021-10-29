@@ -52,6 +52,8 @@ public class Stack {
         } else {
             String outPut = "";
             Node node = top;
+            while (node != null){
+                outPut += "{" + node.getData()+ "}" +" -> ";
             while (node != null) {
                 outPut += "{" + node.getData() + "}" + " -> ";
                 node = node.getNext();
@@ -60,4 +62,7 @@ public class Stack {
             return outPut;
         }
     }
+
+
+}
 }

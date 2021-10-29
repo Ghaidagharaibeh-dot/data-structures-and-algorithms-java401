@@ -46,6 +46,8 @@ public class Queue {
         } else {
             String outPut = "";
             Node node = first;
+            while (node != null){
+                outPut += "{" + node.getData()+ "}" +" -> ";
             while (node != null) {
                 outPut += "{" + node.getData() + "}" + " -> ";
                 node = node.getNext();

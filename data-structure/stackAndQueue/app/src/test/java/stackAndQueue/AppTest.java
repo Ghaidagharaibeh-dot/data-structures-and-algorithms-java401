@@ -9,6 +9,29 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+
+    // Test code challenge 12
+    @Test void AnimalNullTest(){
+        AnimalShelter testing = new AnimalShelter();
+        testing.enqueue(new Cat("Cati"));
+        testing.enqueue(new Dog("lio"));
+        testing.dequeue("cats");
+        testing.dequeue("dogs");
+        assertTrue(testing.cats.ifEmpty());
+
+    }
+
+    @Test void AnimalShelterTest(){
+        AnimalShelter testing = new AnimalShelter();
+        testing.enqueue(new Cat("cati"));
+        testing.enqueue(new Cat("Jess"));
+        testing.enqueue(new Dog("Bob"));
+        testing.enqueue(new Dog("Lio"));
+        String expected = "AnimalShelter{cat={caty} -> {Jess} -> {Null}, dog={Bob} -> {Lio} -> {Null}}";
+
+        assertEquals(expected,testing.toString());
+    }
+
     @Test
     public void enqueuePseudo(){
         PseudoQueue testing = new PseudoQueue();
