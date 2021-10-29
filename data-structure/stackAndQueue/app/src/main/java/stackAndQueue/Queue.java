@@ -38,4 +38,20 @@ public class Queue {
     public boolean ifEmpty() {
         return first == null;
     }
+
+    @Override
+    public String toString() {
+        if (first == null) {
+            return "The List is empty";
+        } else {
+            String outPut = "";
+            Node node = first;
+            while (node != null){
+                outPut += "{" + node.getData()+ "}" +" -> ";
+                node = node.getNext();
+            }
+            outPut += "{Null}";
+            return outPut;
+        }
+    }
 }

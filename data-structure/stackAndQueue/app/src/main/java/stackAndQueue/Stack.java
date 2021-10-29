@@ -47,6 +47,21 @@ public class Stack {
         return top;
     }
 
+    @Override
+    public String toString() {
+        if (top == null) {
+            return "The List is empty";
+        } else {
+            String outPut = "";
+            Node node = top;
+            while (node != null){
+                outPut += "{" + node.getData()+ "}" +" -> ";
+                node = node.getNext();
+            }
+            outPut += "{Null}";
+            return outPut;
+        }
+    }
 
 
 }
