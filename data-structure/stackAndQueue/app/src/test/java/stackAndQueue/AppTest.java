@@ -4,11 +4,39 @@
 package stackAndQueue;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @Test
+    public void enqueuePseudo(){
+        PseudoQueue testing = new PseudoQueue();
+        testing.enqueue("G");
+        testing.enqueue("H");
+        testing.enqueue("I");
+        testing.enqueue("D");
+        testing.enqueue("A");
+
+        assertEquals("", testing.toString());
+
     }
+
+    @Test
+    public void dequeuePseudo() {
+        PseudoQueue testing = new PseudoQueue();
+
+        testing.enqueue("G");
+        testing.enqueue("H");
+        testing.enqueue("I");
+        testing.enqueue("D");
+        testing.enqueue("A");
+        assertEquals("G", testing.dequeue());
+        testing.dequeue();
+        testing.dequeue();
+        assertEquals("D", testing.dequeue());
+
+
+    }
+
 }
