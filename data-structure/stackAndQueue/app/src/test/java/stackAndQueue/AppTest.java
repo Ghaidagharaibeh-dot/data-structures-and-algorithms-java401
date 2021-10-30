@@ -8,6 +8,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @Test
+    public void validateBracketsTest() {
+        Brackets testing= new Brackets();
+
+            String testOne= "{}";
+            String testTwo= "{{(}}";
+            String testThree= "{{))}}";
+
+            assertEquals(true, testing.validateBrackets(testOne));
+            assertEquals(false, testing.validateBrackets(testTwo));
+            assertEquals(false, testing.validateBrackets(testThree));
+        }
+
+    }
+
 
 
     // Test code challenge 12
