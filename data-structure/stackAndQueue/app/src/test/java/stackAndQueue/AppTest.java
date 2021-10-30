@@ -7,12 +7,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @Test
     public void validateBracketsTest() {
+        Brackets testing= new Brackets();
 
-        Brackets test = new Brackets();
+            String testOne= "{}";
+            String testTwo= "{{(}}";
+            String testThree= "{{))}}";
 
-        assertTrue(test.validateBrackets("{}")); // true
-        assertTrue(test.validateBrackets("{}(){}")); // true
-//
+            assertEquals(true, testing.validateBrackets(testOne));
+            assertEquals(false, testing.validateBrackets(testTwo));
+            assertEquals(false, testing.validateBrackets(testThree));
+        }
+
     }
-}
+

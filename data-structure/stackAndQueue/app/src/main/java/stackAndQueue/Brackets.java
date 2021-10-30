@@ -2,32 +2,28 @@ package stackAndQueue;
 
 public class Brackets {
 
-    public String duckDuckGoose(String list[] ,int k){
+    public boolean validateBrackets(String brackets) {
+        Stack stack = new Stack();
 
 
+        for (int i = 0; i < brackets.length(); i++) {
 
-    public boolean validateBrackets(String brackets){
-        Stack leftBracket=new Stack();
-
-
-        for (int i=0;i<brackets.length();i++){
-
-            if(brackets.charAt(i) == '{' || brackets.charAt(i) == '(' || brackets.charAt(i)== '['){
-                leftBracket.push(brackets.charAt(i)+"");
-            }
-            else {
-                if(brackets.charAt(i) == '}' && leftBracket.peek() == '{' + "" ||
-                        brackets.charAt(i) == ']' && leftBracket.peek() == '['+ "" ||
-                        brackets.charAt(i) == ')' && leftBracket.peek() == '(' + ""
-                ) {
-                    leftBracket.pop();
-                }
-                if(leftBracket.ifEmpty()){
+            if (brackets.charAt(i) == '{' || brackets.charAt(i) == '(' || brackets.charAt(i) == '[') {
+                stack.push(brackets.charAt(i) + "");
+            } else if (brackets.charAt(i) == '}' || brackets.charAt(i) == ')' || brackets.charAt(i) == ']') {
+                String value = stack.peek();
+                if (((brackets.charAt(i) + "").equals('}' + "") && value.equals('{' + "")
+                        || (brackets.charAt(i) + "").equals(')' + "") && value.equals('(' + "")
+                        || (brackets.charAt(i) + "").equals(']' + "") && value.equals('[' + "")) && !stack.ifEmpty()) {
+                    stack.pop();
+                } else {
                     return false;
                 }
             }
         }
+        return stack.ifEmpty();
 
-        return leftBracket.ifEmpty();
     }
 }
+
+
