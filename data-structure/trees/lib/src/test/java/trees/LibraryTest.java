@@ -3,12 +3,102 @@
  */
 package trees;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    @Test void instantiateBinarySearchTree(){
+        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+        assertNotNull(testing);
     }
+    @Test void rootBinarySearchTree(){
+        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+        testing.add(50);
+        testing.add(20);
+        testing.add(30);
+        testing.add(40);
+
+        assertEquals(50,testing.getRoot().getData());
+    }
+    @Test void leftAndRightBinarySearchTree(){
+        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+        testing.add(2);
+        testing.add(4);
+        testing.add(6);
+        assertEquals(2,testing.getRoot().getData());
+        assertEquals(4,testing.getRoot().getLeftNode().getData());
+        assertEquals(6,testing.getRoot().getRightNode().getData());
+    }
+    @Test void traverseBinarySearchTree(){
+        BinarySearchTree<Integer> teating = new BinarySearchTree<>();
+        teating.add(8);
+        teating.add(3);
+        teating.add(10);
+        teating.add(1);
+        teating.add(6);
+        teating.add(14);
+        assertEquals("[8, 3, 1, 6, 10, 14]",teating.preOrder().toString()); // preOrder traverse
+        assertEquals("[1, 3, 6, 8, 10, 14]",teating.inOrder().toString()); // inOrder traverse
+        assertEquals("[1, 6, 3, 14, 10, 8]",teating.postOrder().toString());      // postOrder traverse
+    }
+
+    @Test void containBinarySearchTree(){
+        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+        testing.add(8);
+        testing.add(3);
+        testing.add(10);
+        testing.add(1);
+        testing.add(6);
+        testing.add(14);
+
+        assertTrue(testing.contains(1));
+        assertFalse(testing.contains(7));
+    }
+
+//    // Test code challenge 16
+//    @Test
+//    public void testEmpty(){
+//        BinaryTree testing=new BinaryTree();
+//        assertEquals(0,testing.max());
+//    }
+//
+//    @Test
+//    void maxBinaryTreeValue() {
+//        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+//        testing.add(10);
+//        testing.add(20);
+//        testing.add(30);
+//        testing.add(40);
+//        testing.add(50);
+//
+//        assertEquals(50, testing.max());
+//
+//    }
+
+
+    // test for code challenge 17
+
+//    @Test
+//    public void testEmptyTree(){
+//        BinaryTree testing = new BinaryTree();
+//
+//        assertNull(testing.treeBreadthFirst(testing));
+//    }
+//
+//    @Test
+//    void testBreadthFirst() {
+//
+//        BinaryTree testing = new BinaryTree();
+//
+//        testing.setRoot(new Node<>(1));
+//        assertEquals("[7]", testing.treeBreadthFirst(testing).toString());
+//
+//        testing.getRoot().setLeftNode(new Node(2));
+//        testing.getRoot().setRightNode(new Node(3));
+//        assertEquals("[1, 2, 3]", testing.treeBreadthFirst(testing).toString());
+//
+//
+//    }
+
 }
