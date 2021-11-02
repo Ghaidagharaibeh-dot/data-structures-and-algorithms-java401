@@ -56,25 +56,25 @@ class LibraryTest {
         assertFalse(testing.contains(7));
     }
 
-//    // Test code challenge 16
-//    @Test
-//    public void testEmpty(){
-//        BinaryTree testing=new BinaryTree();
-//        assertEquals(0,testing.max());
-//    }
-//
-//    @Test
-//    void maxBinaryTreeValue() {
-//        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
-//        testing.add(10);
-//        testing.add(20);
-//        testing.add(30);
-//        testing.add(40);
-//        testing.add(50);
-//
-//        assertEquals(50, testing.max());
-//
-//    }
+    // Test code challenge 16
+    @Test
+    public void testEmpty(){
+        BinaryTree testing=new BinaryTree();
+        assertEquals(0,testing.max());
+    }
+
+    @Test
+    void maxBinaryTreeValue() {
+        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+        testing.add(10);
+        testing.add(20);
+        testing.add(30);
+        testing.add(40);
+        testing.add(50);
+
+        assertEquals(50, testing.max());
+
+    }
 
 
     // test for code challenge 17
