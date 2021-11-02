@@ -80,25 +80,25 @@ class LibraryTest {
     // test for code challenge 17
 
 //    @Test
-//    public void testEmptyTree(){
-//        BinaryTree testing = new BinaryTree();
-//
-//        assertNull(testing.treeBreadthFirst(testing));
-//    }
-//
-//    @Test
-//    void testBreadthFirst() {
-//
-//        BinaryTree testing = new BinaryTree();
-//
-//        testing.setRoot(new Node<>(1));
-//        assertEquals("[7]", testing.treeBreadthFirst(testing).toString());
-//
-//        testing.getRoot().setLeftNode(new Node(2));
-//        testing.getRoot().setRightNode(new Node(3));
-//        assertEquals("[1, 2, 3]", testing.treeBreadthFirst(testing).toString());
-//
-//
-//    }
+    public void testEmptyTree(){
+        BinaryTree testing = new BinaryTree();
+
+        assertNull(testing.treeBreadthFirst(testing));
+    }
+
+    @Test
+    void testBreadthFirst() {
+
+        BinaryTree testing = new BinaryTree();
+
+        testing.setRoot(new Node<>(1));
+        assertEquals("[7]", testing.treeBreadthFirst(testing).toString());
+
+        testing.getRoot().setLeftNode(new Node(2));
+        testing.getRoot().setRightNode(new Node(3));
+        assertEquals("[1, 2, 3]", testing.treeBreadthFirst(testing).toString());
+
+
+    }
 
 }

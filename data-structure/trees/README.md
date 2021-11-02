@@ -35,3 +35,13 @@ Call the max method to find the maximum value in the tree.
 
 
 
+# Challenge Summary
+Write a method that accepts a tree as an argument and return list of all values in the tree, in the order they were encountered.
+## Whiteboard Process
+
+![](codech17.png)
+
+## Approach & Efficiency
+I used an arraylist and queue, while and if statements.
+Space :O(N)
+Time:O(N)

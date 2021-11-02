@@ -115,26 +115,26 @@ public class BinaryTree<T> {
     }
 
     // code Challenge 17
-//    public List<T> treeBreadthFirst(BinaryTree<T> binaryTree){
-//        if(isEmpty()){
-//            return null;
-//        }
-//        ArrayList<T> list= new ArrayList<>() ;
-//        Queue<Node<T>> tree=new LinkedList<>();
-//        Node<T> newNode=binaryTree.root;
-//        tree.add(newNode);
-//        while (!tree.isEmpty()){
-//            if(tree.peek().getLeftNode() != null){
-//                tree.add(tree.peek().getLeftNode());
-//
-//            }
-//            if (tree.peek().getRightNode() != null){
-//                tree.add(tree.peek().getRightNode());
-//            }
-//            list.add(tree.remove().getData());
-//        }
-//        return list;
-//    }
+    public List<T> treeBreadthFirst(BinaryTree<T> binaryTree){
+        if(isEmpty()){
+            return null;
+        }
+        ArrayList<T> list= new ArrayList<>() ;
+        Queue<Node<T>> tree=new LinkedList<>();
+        Node<T> newNode=binaryTree.root;
+        tree.add(newNode);
+        while (!tree.isEmpty()){
+            if(tree.peek().getLeftNode() != null){
+                tree.add(tree.peek().getLeftNode());
+
+            }
+            if (tree.peek().getRightNode() != null){
+                tree.add(tree.peek().getRightNode());
+            }
+            list.add(tree.remove().getData());
+        }
+        return list;
+    }
 
 }
 
