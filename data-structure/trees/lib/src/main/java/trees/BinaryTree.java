@@ -99,20 +99,20 @@ public class BinaryTree<T> {
     }
 
 
-//    // code challange 16
-//    public int max(){
-//        if(isEmpty()){
-//            return 0;
-//        }
-//        int maximumV=0;
-//        List<T> list = preOrder();
-//        for (int i=0;i<list.size();i++){
-//            if(Integer.parseInt(list.get(i)+"")>maximumV){
-//                maximumV=Integer.parseInt(list.get(i)+"");
-//            }
-//        }
-//        return maximumV;
-//    }
+    // code challange 16
+    public int max(){
+        if(isEmpty()){
+            return 0;
+        }
+        int maximumV=0;
+        List<T> list = preOrder();
+        for (int i=0;i<list.size();i++){
+            if(Integer.parseInt(list.get(i)+"")>maximumV){
+                maximumV=Integer.parseInt(list.get(i)+"");
+            }
+        }
+        return maximumV;
+    }
 
     // code Challenge 17
 //    public List<T> treeBreadthFirst(BinaryTree<T> binaryTree){
