@@ -3,10 +3,12 @@ package trees;
 import com.google.common.base.MoreObjects;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree<T> {
-    public Node<T> root;
+    protected Node<T> root;
 
 
     private void preOrderHelper(Node<T> rootvalue, List<T> list) {
@@ -80,6 +82,59 @@ public class BinaryTree<T> {
     public boolean isEmpty() {
         return root == null;
     }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
+    }
+
+    @Override
+    public String toString() {
+        return "BinaryTree { " +
+                "root=" + root +
+                " }";
+    }
+
+
+//    // code challange 16
+//    public int max(){
+//        if(isEmpty()){
+//            return 0;
+//        }
+//        int maximumV=0;
+//        List<T> list = preOrder();
+//        for (int i=0;i<list.size();i++){
+//            if(Integer.parseInt(list.get(i)+"")>maximumV){
+//                maximumV=Integer.parseInt(list.get(i)+"");
+//            }
+//        }
+//        return maximumV;
+//    }
+
+    // code Challenge 17
+//    public List<T> treeBreadthFirst(BinaryTree<T> binaryTree){
+//        if(isEmpty()){
+//            return null;
+//        }
+//        ArrayList<T> list= new ArrayList<>() ;
+//        Queue<Node<T>> tree=new LinkedList<>();
+//        Node<T> newNode=binaryTree.root;
+//        tree.add(newNode);
+//        while (!tree.isEmpty()){
+//            if(tree.peek().getLeftNode() != null){
+//                tree.add(tree.peek().getLeftNode());
+//
+//            }
+//            if (tree.peek().getRightNode() != null){
+//                tree.add(tree.peek().getRightNode());
+//            }
+//            list.add(tree.remove().getData());
+//        }
+//        return list;
+//    }
 
 }
 

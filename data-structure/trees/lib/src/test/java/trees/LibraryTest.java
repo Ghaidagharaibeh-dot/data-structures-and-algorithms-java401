@@ -55,4 +55,50 @@ class LibraryTest {
         assertTrue(testing.contains(1));
         assertFalse(testing.contains(7));
     }
+
+//    // Test code challenge 16
+//    @Test
+//    public void testEmpty(){
+//        BinaryTree testing=new BinaryTree();
+//        assertEquals(0,testing.max());
+//    }
+//
+//    @Test
+//    void maxBinaryTreeValue() {
+//        BinarySearchTree<Integer> testing = new BinarySearchTree<>();
+//        testing.add(10);
+//        testing.add(20);
+//        testing.add(30);
+//        testing.add(40);
+//        testing.add(50);
+//
+//        assertEquals(50, testing.max());
+//
+//    }
+
+
+    // test for code challenge 17
+
+//    @Test
+//    public void testEmptyTree(){
+//        BinaryTree testing = new BinaryTree();
+//
+//        assertNull(testing.treeBreadthFirst(testing));
+//    }
+//
+//    @Test
+//    void testBreadthFirst() {
+//
+//        BinaryTree testing = new BinaryTree();
+//
+//        testing.setRoot(new Node<>(1));
+//        assertEquals("[7]", testing.treeBreadthFirst(testing).toString());
+//
+//        testing.getRoot().setLeftNode(new Node(2));
+//        testing.getRoot().setRightNode(new Node(3));
+//        assertEquals("[1, 2, 3]", testing.treeBreadthFirst(testing).toString());
+//
+//
+//    }
+
 }
