@@ -45,3 +45,13 @@ Write a method that accepts a tree as an argument and return list of all values 
 I used an arraylist and queue, while and if statements.
 Space :O(N)
 Time:O(N)
+
+
+# Challenge 18
+Write a function called fizz buzz tree takes k-ary tree as an argument and return new k-ary tree. Determine whether or not the value of each node is divisible by 3, 5 or both.
+## Whiteboard Process
+![](codecha18.png)
+
+## Approach & Efficiency
+- Space O(N)
+- Time O(N)

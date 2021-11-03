@@ -102,6 +102,38 @@ class LibraryTest {
     }
 
     // code challenge 18
+    @Test
+    public void stringTest() {
+        KaryTree test = new KaryTree(2);
+        test.add(1);
+        test.add(2);
+        assertEquals("{  1   2   }", test.fizzBuzzTree(test).toString());
+    }
 
+    @Test
+    public void fizzTest() {
+        KaryTree testing = new KaryTree(2);
+        testing.add(1);
+        testing.add(24);
+        assertEquals("{  1   Fizz   }", testing.fizzBuzzTree(testing).toString());
+    }
+
+    @Test
+    public void buzzTest() {
+        KaryTree testing = new KaryTree(2);
+        testing.add(8);
+        testing.add(5);
+        assertEquals("{  8   Buzz   }", testing.fizzBuzzTree(testing).toString());
+    }
+    @Test
+    public void fizzBuzzTest() {
+        KaryTree test = new KaryTree(2);
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(5);
+        test.add(15);
+        assertEquals("[ 1   2   Buzz    FizzBuzz     Fizz   ]", test.fizzBuzzTree(test).toString());
+    }
 
 }
