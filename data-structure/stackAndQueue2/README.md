@@ -31,3 +31,34 @@ dequeue() to Removes the node from the front of the queue.
 peek() to Returns Value of the node located at the front of the queue.
 
 isEmpty() Boolean indicating whether or not the queue is empty.
+
+## Challenge 11
+Implement a queue by using two stacks Create 2Methods: enqueue : Inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue : Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+### Whiteboard Process
+
+![](codechallenge11.png)
+
+### Approach & Efficiency
+
+Enqueue Space: O(1)
+
+Time: O(1)
+
+Dequeue Space: O(1)
+
+Time: O(n) API Stacks push() adds an item to the top of the stack.
+
+pop() removes the top element from the stack and returns it.
+
+peek() returns the top element of the stack.
+
+isEmpty() Returns Boolean indicating whether stack is empty.
+
+Queue Enqueue add an item to a queue (to the last)
+
+Dequeue remove an item from a queue(remove the oldest).
+
+Peek returns the front Node of the queue.
+
+isEmpty() Boolean indicating whether or not the queue is empty.

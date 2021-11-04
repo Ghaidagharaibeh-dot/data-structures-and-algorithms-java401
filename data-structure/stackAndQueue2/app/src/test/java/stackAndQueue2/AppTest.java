@@ -80,4 +80,36 @@ class AppTest {
             assertEquals(expected, testing.pop());
             assertEquals(expected, testing.peek());
         }
+
+        //code challenge 11
+
+    @Test
+    public void enqueuePseudo(){
+        PseudoQueue testing = new PseudoQueue();
+        testing.enqueue("G");
+        testing.enqueue("H");
+        testing.enqueue("I");
+        testing.enqueue("D");
+        testing.enqueue("A");
+
+        assertEquals("PseudoQueue{stack2={G} -> {H} -> {I} -> {D} -> {A} -> {Null}}", testing.toString());
+
+    }
+
+    @Test
+    public void dequeuePseudo() {
+        PseudoQueue testing = new PseudoQueue();
+
+        testing.enqueue("G");
+        testing.enqueue("H");
+        testing.enqueue("I");
+        testing.enqueue("D");
+        testing.enqueue("A");
+        assertEquals("G", testing.dequeue());
+        testing.dequeue();
+        testing.dequeue();
+        assertEquals("D", testing.dequeue());
+
+
+    }
 }
