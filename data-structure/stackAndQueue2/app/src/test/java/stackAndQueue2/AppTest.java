@@ -134,4 +134,19 @@ class AppTest {
 
         assertEquals(expected,testing.toString());
     }
+
+    // code challenge 13
+    @Test
+    public void validateBracketsTest() {
+        Brackets testing= new Brackets();
+
+        String testOne= "{}";
+        String testTwo= "{{(}}";
+        String testThree= "{{))}}";
+
+        assertEquals(true, testing.validateBrackets(testOne));
+        assertEquals(false, testing.validateBrackets(testTwo));
+        assertEquals(false, testing.validateBrackets(testThree));
+    }
+
 }

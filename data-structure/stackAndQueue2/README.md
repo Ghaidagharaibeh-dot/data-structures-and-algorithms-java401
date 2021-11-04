@@ -74,3 +74,18 @@ Stacks and Queues Stack contains objects that are pushed and popped according to
 
 ### Approach & Efficiency
 Space O(1) Time O(1)
+
+
+## Challenge 13
+Write a function called validate brackets Arguments: string Return: boolean
+
+representing whether the brackets in the string are balanced There are 3 types of brackets:
+
+Round Brackets : () Square Brackets : [] Curly Brackets : {}
+
+### Whiteboard Process
+
+![](codeChallenge13.png)
+
+### Approach & Efficiency
+Time : O(N) Space : O(1)
