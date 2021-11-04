@@ -112,4 +112,26 @@ class AppTest {
 
 
     }
+
+    // code challenge 12
+    @Test void AnimalNullTest(){
+        AnimalShelter testing = new AnimalShelter();
+        testing.enqueue(new Cat("Cati"));
+        testing.enqueue(new Dog("lio"));
+        testing.dequeue("cats");
+        testing.dequeue("dogs");
+        assertFalse(testing.cats.isEmpty());
+
+    }
+
+    @Test void AnimalShelterTest(){
+        AnimalShelter testing = new AnimalShelter();
+        testing.enqueue(new Cat("cati"));
+        testing.enqueue(new Cat("Jess"));
+        testing.enqueue(new Dog("Bob"));
+        testing.enqueue(new Dog("Lio"));
+        String expected = "AnimalShelter{cat={cati} -> {Jess} -> {Null}, dog={Bob} -> {Lio} -> {Null}}";
+
+        assertEquals(expected,testing.toString());
+    }
 }
