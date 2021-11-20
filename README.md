@@ -11,6 +11,8 @@
 | 6 | Trees | [Link](data-structure/trees/README.md)|
 | 7 | Insertion  | [Link](codechallenges/InsertionSort/InsertionSort.md)|
 | 8 | mergeSort  | [Link](codechallenges/InsertionSort/mergeSort.md)|
+| 9 | quickSort  | [Link](codechallenges/InsertionSort/quickSort.md)|
+
 
 
 

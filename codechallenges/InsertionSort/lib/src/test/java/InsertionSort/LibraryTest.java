@@ -60,4 +60,31 @@ public class LibraryTest {
 
     }
 
+    @Test
+    public void ReverseSortedQuickSortTest() {
+        int[] array = {20,18,12,8,5,-2};
+        int[] expected = {-2, 5, 8, 12, 18,20};
+        Library.quickSort(array, 0, array.length - 1);
+        assertArrayEquals(expected, array);
+
+    }
+
+    @Test
+    public void FewUniquesQuickSortTest() {
+        int[] array = {5,12,7,5,5,7};
+        int[] expected = {5,5,5,7,7,12};
+        Library.quickSort(array, 0, array.length - 1);
+        assertArrayEquals(expected, array);
+
+    }
+
+    @Test
+    public void NearlySortedQuickSortTest() {
+        int[] array = {2,3,5,7,13,11};
+        int[] expected = {2,3,5,7,11,13};
+        Library.quickSort(array, 0, array.length - 1);
+        assertArrayEquals(expected, array);
+
+    }
+
 }
