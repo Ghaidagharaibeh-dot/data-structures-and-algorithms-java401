@@ -10,17 +10,54 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test void ReverseInsertionSort() {
+    @Test
+    void ReverseInsertionSort() {
 
         int[] ReverseSortedArr = {20, 18, 12, 8, 5, -2};
         assertEquals("[-2, 5, 8, 12, 18, 20]", Arrays.toString(Library.insertionSort(ReverseSortedArr)));
     }
-    @Test void FewUniquesInsertionSort() {
+
+    @Test
+    void FewUniquesInsertionSort() {
         int[] FewUniquesArr = {5, 12, 7, 5, 5, 7};
         assertEquals("[5, 5, 5, 7, 7, 12]", Arrays.toString(Library.insertionSort(FewUniquesArr)));
     }
-    @Test void NearlyInsertionSort() {
-        int[]  NearlySortedArr = {2,3,5,7,13,11};
+
+    @Test
+    void NearlyInsertionSort() {
+        int[] NearlySortedArr = {2, 3, 5, 7, 13, 11};
         assertEquals("[2, 3, 5, 7, 11, 13]", Arrays.toString(Library.insertionSort(NearlySortedArr)));
     }
+
+    // Test for code challenge 27
+    MergeSort mergeSort = new MergeSort();
+
+    @Test
+    public void ReverseMergeSorted() {
+        int[] array = {5, 12, 7, 5, 5, 7};
+        int n = array.length;
+        int[] outputArray = mergeSort.merge(array, 0, n - 1);
+        int[] expectedOutput = {5, 5, 5, 7, 7, 12};
+        assertArrayEquals(expectedOutput, outputArray);
+    }
+
+    @Test
+    public void FewUniquesMergeTest() {
+        int[] array = {20, 18, 12, 8, 5, -2};
+        int n = array.length;
+        int[] outputArray = mergeSort.merge(array, 0, n - 1);
+        int[] expectedOutput = {-2, 5, 8, 12, 18, 20};
+        assertArrayEquals(expectedOutput, outputArray);
+    }
+
+    @Test
+    public void NearlySortedMergeTest() {
+        int[] array = {2, 3, 5, 7, 13, 11};
+        int n = array.length;
+        int[] outputArray = mergeSort.merge(array, 0, n - 1);
+        int[] expectedOutput = {2, 3, 5, 7, 11, 13};
+        assertArrayEquals(expectedOutput, outputArray);
+
+    }
+
 }
