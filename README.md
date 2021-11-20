@@ -10,6 +10,8 @@
 | 5 | stack-and-queue | [Link](data-structure/stackAndQueue2)|
 | 6 | Trees | [Link](data-structure/trees/README.md)|
 | 7 | Insertion  | [Link](codechallenges/InsertionSort/InsertionSort.md)|
+| 8 | mergeSort  | [Link](codechallenges/InsertionSort/mergeSort.md)|
+
 
 
 
