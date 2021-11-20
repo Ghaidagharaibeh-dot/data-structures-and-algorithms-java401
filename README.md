@@ -9,6 +9,8 @@
 | 4 | Linked-List | [Link](data-structure/linked-list/README.md)|
 | 5 | stack-and-queue | [Link](data-structure/stackAndQueue2)|
 | 6 | Trees | [Link](data-structure/trees/README.md)|
+| 7 | Insertion  | [Link](codechallenges/InsertionSort/InsertionSort.md)|
+
 
 
 
