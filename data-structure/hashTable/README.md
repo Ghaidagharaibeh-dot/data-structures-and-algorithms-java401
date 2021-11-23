@@ -19,3 +19,24 @@ Write a function that accepted a string parameter which finds the first word to 
 ## Whiteboard Process
 
 ![alt text](img/codech30.png)
+
+
+# Binary Tree  cc32
+
+## Description
+Write a function called tree_intersection that takes two binary trees as parameters. Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+
+
+## Whiteboard Process
+
+![alt text](img/codech32.png)
+
+
+## Approch and effeciancy
+Time : Big O(n)
+
+Space : Big O(n)
+
+
+
+

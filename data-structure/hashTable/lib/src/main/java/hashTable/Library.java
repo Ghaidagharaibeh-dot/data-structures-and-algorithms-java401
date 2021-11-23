@@ -3,6 +3,9 @@
  */
 package hashTable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Library {
     public static void main(String[] args) throws Exception {
 //        HashTable<String> hashTable=new HashTable<String>(5);
@@ -11,5 +14,22 @@ public class Library {
 //        System.out.println(hashTable.contain(7));
         System.out.println("hello from Ghaida");
 
+    }
+
+    public static <V> ArrayList<V> treeIntersection(BinaryTree<V> tree1, BinaryTree<V> tree2) {
+        ArrayList<V> response = new ArrayList<>();
+        if (tree1.root == null || tree2.root == null) {
+            return null;
+        } else {
+            List<V> inTree1 = tree1.preOrder(tree1.root);
+            System.out.println(inTree1);
+            List<V> inTree2 = tree2.preOrder(tree2.root);
+            for (V val : inTree1) {
+                if (inTree2.contains(val)) {
+                    response.add(val);
+                }
+            }
+            return response;
+        }
     }
 }
