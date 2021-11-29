@@ -47,5 +47,28 @@ class LibraryTest {
 
     }
 
+    @Test
+    public void breadthFirst(){
+
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Metroville");
+        graph1.addVertex("Monstroplolis");
+        graph1.addVertex("Narnia");
+        graph1.addVertex("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle");
+        graph1.addEdge("Arendelle", "Metroville");
+        graph1.addEdge("Arendelle", "Monstroplolis");
+        graph1.addEdge("Metroville", "Narnia");
+        graph1.addEdge("Metroville", "Naboo");
+        graph1.addEdge("Metroville", "Monstroplolis");
+        graph1.addEdge("Monstroplolis", "Naboo");
+        graph1.addEdge("Narnia", "Naboo");
+
+        assertEquals("[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]", graph1.breadthTraverse("Pandora").toString());
+    }
 
 }
