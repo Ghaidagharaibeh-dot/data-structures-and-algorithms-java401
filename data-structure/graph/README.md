@@ -42,3 +42,21 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 
 - Time: O(n) n: is the number of neighbor Vertices
 - Space: O(1)
+
+## Graph Breadth First
+Create a static method which returns a Set of the Graph vertices in their breadth from a specified root.
+
+## code Challenge 36
+
+Create a method that take a vertex as a parameter as a start point and return a collection of vertices in the order they were visited.
+
+## Whiteboard Process
+
+![](img/codech36.png)
+
+
+## Approach and Efficiency
+Time: O(n^2)
+
+Space: O(n)
+
