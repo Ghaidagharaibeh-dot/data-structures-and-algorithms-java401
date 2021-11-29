@@ -13,6 +13,8 @@
 | 8 | mergeSort  | [Link](codechallenges/InsertionSort/mergeSort.md)|
 | 9 | quickSort  | [Link](codechallenges/InsertionSort/quickSort.md)|
 | 10 | HashTable  | [Link](data-structure/hashTable/README.md)|
+| 11 | Graph  | [Link](data-structure/graph/README.md)|
+
 
 
 
