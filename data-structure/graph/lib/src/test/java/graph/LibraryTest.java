@@ -72,6 +72,55 @@ class LibraryTest {
     }
 
 
+    @Test
+    public void depthFirstTest(){
 
+        Graph graph3 = new Graph();
+
+        graph3.addVertex("A");
+        graph3.addVertex("B");
+        graph3.addVertex("C");
+        graph3.addVertex("D");
+        graph3.addVertex("E");
+        graph3.addVertex("F");
+        graph3.addVertex("G");
+        graph3.addVertex("H");
+
+        graph3.addEdge("A", "D");
+        graph3.addEdge("A", "B");
+        graph3.addEdge("B", "D");
+        graph3.addEdge("B", "C");
+        graph3.addEdge("C", "G");
+        graph3.addEdge("D", "F");
+        graph3.addEdge("D", "H");
+        graph3.addEdge("D", "E");
+        graph3.addEdge("F", "H");
+
+        assertEquals("[A, B, C, G, D, E, H, F]", graph3.depthFirstTraverse("A").toString());
+    }
+
+    @Test
+    public void depthFirstOneVertex(){
+
+        Graph graph3 = new Graph();
+
+        graph3.addVertex("A");
+
+        assertEquals("[A]", graph3.depthFirstTraverse("A").toString());
+    }
+
+    @Test
+    public void depthFirstTest2(){
+
+        Graph graph3 = new Graph();
+
+        graph3.addVertex("A");
+        graph3.addVertex("B");
+        graph3.addVertex("C");
+
+        graph3.addEdge("A", "B");
+
+        assertEquals("[A, B]", graph3.depthFirstTraverse("A").toString());
+    }
 
 }
