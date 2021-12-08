@@ -46,7 +46,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ## Graph Breadth First
 Create a static method which returns a Set of the Graph vertices in their breadth from a specified root.
 
-## code Challenge 36
+## code Challenge 
 
 Create a method that take a vertex as a parameter as a start point and return a collection of vertices in the order they were visited.
 
@@ -59,4 +59,23 @@ Create a method that take a vertex as a parameter as a start point and return a 
 Time: O(n^2)
 
 Space: O(n)
+
+
+## Graph Business Trip
+This challenge to check the weight of edge between the connected vertices.
+
+## Challenge
+
+Create a method give us the cost of the trip between cities.
+
+## Whiteboard Process
+
+![](img/codechallenge37.png)
+
+
+## Approach and Efficiency
+
+- Time: O(n^2)
+- Space: O(n)
+
 
