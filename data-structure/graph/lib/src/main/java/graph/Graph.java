@@ -93,4 +93,23 @@ public class Graph {
             }
         }
     }
+
+    Set<String> depthFirstTraverse(String root) {
+        Set<String> visited = new LinkedHashSet<>();
+        Stack<String> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+
+                for (Vertex v : getNeighbors(vertex)) {
+                    stack.push(v.data);
+                }
+            }
+        }
+
+        return visited;
+    }
 }

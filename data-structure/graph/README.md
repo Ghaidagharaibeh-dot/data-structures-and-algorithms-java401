@@ -79,3 +79,21 @@ Create a method give us the cost of the trip between cities.
 - Space: O(n)
 
 
+## Graph Depth First CC38
+
+Create a static method which returns a Set of the Graph vertices in their Depth from a specified root.
+
+## Challenge
+Create a method that take a vertex as a parameter as a start point and return a collection of vertices in the order they were visited.
+
+## Whiteboard Process
+
+![](img/codeChallenge38.png)
+
+
+## Approach and Efficiency
+
+- Time: O(n^2)
+
+- Space: O(n)
+
