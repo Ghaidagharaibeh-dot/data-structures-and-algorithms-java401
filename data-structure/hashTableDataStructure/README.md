@@ -15,6 +15,11 @@ Implement a Hashtable Class
 
 -```isEmpty()```: check the hash table is empty or not.
 
+
+# Hashmap-tree-intersection CC32
+Create a method that takes two binary trees as a parameter and return an array of nodes that are similar in two trees.
+
+
 # Hashmap-repeated-word CC31
 Write a function that accepted a string parameter which finds the first word to occur more than once in a string and return a string.
 
