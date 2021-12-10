@@ -1,7 +1,9 @@
 package hashTableDataStructure;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import org.w3c.dom.Node;
+
+
+import java.util.*;
 
 public class HashTable<K, V> {
     private ArrayList<HashNode<K, V>> bucketArray;
@@ -129,5 +131,40 @@ public class HashTable<K, V> {
         }
         return get(key) != null;
     }
+
+    //    <<< Code Challenge 31 >>>
+
+    public String  repeatedWord(String strings){
+
+        String allWords = strings.toLowerCase(Locale.ROOT);
+        String [] token = allWords.split(" ");
+        HashTable<String, Integer> hashMap = new HashTable<String, Integer>();
+
+
+        for (String word : token){
+
+            if(word.contains(",")){
+                word = word.substring(0, word.length()-1);
+            }
+
+            if(!word.equals("")){
+
+                int count = hashMap.get(word) != null ? hashMap.get(word) : 0;
+
+                if (count == 1){
+                    return word;
+                }
+                hashMap.add(word, count + 1);
+            }
+        }
+
+        return "no repeated words";
+    }
+
+
+    
+
+
+
 
 }

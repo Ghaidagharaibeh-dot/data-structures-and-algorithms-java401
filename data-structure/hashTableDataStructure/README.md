@@ -14,3 +14,9 @@ Implement a Hashtable Class
 - ```remove(K key)```: remove the value from the table based on the key.
 
 -```isEmpty()```: check the hash table is empty or not.
+
+
+# Hashmap-tree-intersection CC32
+Create a method that takes two binary trees as a parameter and return an array of nodes that are similar in two trees.
+
+
