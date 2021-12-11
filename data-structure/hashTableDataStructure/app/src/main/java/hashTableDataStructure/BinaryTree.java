@@ -1,6 +1,4 @@
-package HashTabels.binaryTree;
-
-import hashTableDataStructure.binaryTree.Node;
+package hashTableDataStructure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +31,7 @@ public class BinaryTree {
         System.out.print(node.getKey() + " ");
         postOrderList.add(node.getKey());
     }
+
     public void inOrder(Node node ){
 
         if(node == null){
