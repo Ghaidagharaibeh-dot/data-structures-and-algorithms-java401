@@ -1,6 +1,7 @@
-package hashTableDataStructure.binaryTree;
+package hashTableDataStructure;
 
 public class Node<T> {
+
     private final int key;
     private Node <T> left;
     private Node <T> right;
@@ -29,5 +30,4 @@ public class Node<T> {
     public void setRight(Node <T> right) {
         this.right = right;
     }
-
 }
